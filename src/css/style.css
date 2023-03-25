@@ -1,0 +1,126 @@
+body {
+    background-color: var(--main-bg);
+    font-family: 'Outfit', sans-serif;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px;
+}
+
+.main .card {
+    background-color: var(--card-bg);
+    max-width: 350px;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.main .card .image {
+    position: relative;
+    display: flex;
+}
+
+.main .card .image::before {
+    content: '';
+    background-color: var(--primary-cyan);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.main .card .image:hover::before {
+    opacity: 0.4;
+}
+
+.main .card .image::after {
+    content: '';
+    background: url(../images/icon-view.svg) no-repeat center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.main .card .image:hover::after {
+    opacity: 1;
+}
+
+.main .card .image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.main .card .title {
+    color: var(--white);
+    font-size: 22px;
+    margin: 25px 0px 20px;
+}
+
+.main .card .title:hover {
+    color: var(--primary-cyan);
+}
+
+.main .card .description {
+    color: var(--primary-soft);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+.main .card .info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.main .card .info #eth {
+    color: var(--primary-cyan);
+    display: flex;
+}
+
+.main .card .info #eth::before {
+    content: '';
+    background: url(../images/icon-ethereum.svg) no-repeat center;
+    width: 25px;
+}
+
+.main .card .info #days {
+    color: var(--primary-soft);
+    display: flex;
+}
+
+.main .card .info #days::before {
+    content: '';
+    background: url(../images/icon-clock.svg) no-repeat center;
+    width: 25px;
+}
+
+.main .card .author {
+    display: flex;
+    align-items: center;
+    color: var(--primary-soft);
+    border-top: 1px solid var(--line);
+    padding-top: 15px;
+}
+
+.main .card .author img {
+    max-width: 35px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.main .card .author .name {
+    color: var(--white);
+}
+
+.main .card .author .name:hover {
+    color: var(--primary-cyan);
+}
